@@ -1,0 +1,23 @@
+# MCPB build artifacts
+*.mcpb
+
+# Launcher diagnostic log (created at runtime in the install folder, but also
+# possibly created here during local testing)
+server/launcher.log
+launcher.log
+
+# Node
+server/node_modules/
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+# package-lock.json is intentionally NOT ignored — committed so users get the
+# same @microsoft/powerbi-modeling-mcp version this bundle was tested with.
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/

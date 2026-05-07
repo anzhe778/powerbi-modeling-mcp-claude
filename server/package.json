@@ -1,0 +1,12 @@
+{
+  "name": "powerbi-modeling-mcp-claude-server",
+  "version": "0.1.5",
+  "description": "Launcher and dependency manifest for the Power BI Modeling MCP bundle for Claude Desktop.",
+  "main": "index.js",
+  "private": true,
+  "type": "commonjs",
+  "license": "MIT",
+  "dependencies": {
+    "@microsoft/powerbi-modeling-mcp": "^0.5.0-beta.5"
+  }
+}

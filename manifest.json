@@ -1,0 +1,63 @@
+{
+  "manifest_version": "0.2",
+  "name": "powerbi-modeling-mcp",
+  "display_name": "Power BI Modeling MCP",
+  "version": "0.1.5",
+  "description": "Microsoft Power BI Modeling MCP Server (Public Preview).",
+  "long_description": "Connects Claude to Power BI Desktop, Fabric workspaces, or PBIP/TMDL folders. Read schemas, run DAX queries, and create or modify tables, columns, measures, and relationships.",
+  "author": {
+    "name": "Andrzej Kauf"
+  },
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/server/index.js"]
+    }
+  },
+  "tools_generated": true,
+  "prompts_generated": true,
+  "prompts": [
+    {
+      "name": "ConnectToPowerBIDesktop",
+      "description": "Searches for the Power BI Desktop Analysis Services instance that matches the file name and connects to it.",
+      "arguments": ["name"],
+      "text": "Connect to PowerBI Desktop ${arguments.name} file..."
+    },
+    {
+      "name": "ConnectToFabric",
+      "description": "Connects to a semantic model in a Fabric Workspace.",
+      "arguments": ["workspaceName", "semanticModelName"],
+      "text": "Connect to semantic model '${arguments.semanticModelName}' in Fabric Workspace '${arguments.workspaceName}'."
+    },
+    {
+      "name": "ConnectToPBIP",
+      "description": "Loads the TMDL definition from the semantic model in the Power BI Project (pbip) files.",
+      "arguments": ["pbipPath"],
+      "text": "Open semantic model from PBIP folder '${arguments.pbipPath}'."
+    },
+    {
+      "name": "CreateDAXQuery",
+      "description": "Creates a DAX query based on your semantic model and a natural-language question.",
+      "arguments": ["request"],
+      "text": "Create a DAX query for: ${arguments.request}"
+    },
+    {
+      "name": "RunDAXQueryWithMetrics",
+      "description": "Executes a DAX query with the option to clear cache, returning execution metrics.",
+      "arguments": ["daxQueryText", "clearCache"],
+      "text": "Run this DAX query and return execution metrics (clearCache=${arguments.clearCache}):\n${arguments.daxQueryText}"
+    },
+    {
+      "name": "AnalyzeDAXQuery",
+      "description": "Analyzes DAX query performance by running it with a cleared cache and reviewing execution metrics for potential issues.",
+      "arguments": ["daxQueryText"],
+      "text": "Analyze the performance of this DAX query:\n${arguments.daxQueryText}"
+    }
+  ],
+  "compatibility": {
+    "platforms": ["win32", "darwin"],
+    "runtimes": { "node": ">=18.0.0" }
+  }
+}
