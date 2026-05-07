@@ -73,7 +73,7 @@ Quit Claude Desktop fully (system-tray icon → Quit) and reopen it. The extensi
 
 ## Usage
 
-Open a Power BI Desktop file (or have a Fabric workspace handy) and in a regular Claude chat (not Cowork), type `/` to see the registered prompts, or just ask in natural language — for example:
+Open a Power BI Desktop file (or have a Fabric workspace handy) and type `/` to see the registered prompts, or just ask in natural language — for example:
 
 - *"Connect to my Power BI Desktop file 'sales.pbix'."*
 - *"List the tables in the model."*
