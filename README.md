@@ -73,7 +73,7 @@ Quit Claude Desktop fully (system-tray icon → Quit) and reopen it. The extensi
 
 ## Usage
 
-Open a Power BI Desktop file (or have a Fabric workspace handy) and type `/` to see the registered prompts, or just ask in natural language — for example:
+Open a Power BI Desktop file (or have a Fabric workspace handy) and in a Claude chat, type `/` to see the registered prompts, or just ask in natural language — for example:
 
 - *"Connect to my Power BI Desktop file 'sales.pbix'."*
 - *"List the tables in the model."*
@@ -109,13 +109,19 @@ $env:POWERBI_MCP_DEBUG = "1"
 
 ### Reporting an issue
 
-If a tool call hangs or Claude reports "Server disconnected", attach the tail of `launcher.log` (with `POWERBI_MCP_DEBUG=1` for the failing run) plus the matching entries from Claude's developer settings log to a [GitHub issue](https://github.com/<you>/powerbi-modeling-mcp-claude/issues).
+If a tool call hangs or Claude reports "Server disconnected", attach the tail of `launcher.log` (with `POWERBI_MCP_DEBUG=1` for the failing run) plus the matching entries from Claude's developer settings log to a [GitHub issue](https://github.com/anzhe778/powerbi-modeling-mcp-claude/issues).
 
 ## Credits
 
-- [Microsoft Power BI Modeling MCP](https://github.com/microsoft/powerbi-modeling-mcp) — the underlying server and `.exe`.
+- [Microsoft Power BI Modeling MCP](https://github.com/microsoft/powerbi-modeling-mcp) — MIT-licensed by Microsoft. The underlying server and `.exe`. Downloaded directly from npm at install time; not redistributed by this repository.
 - [microsoft/powerbi-modeling-mcp issue #87](https://github.com/microsoft/powerbi-modeling-mcp/issues/87) — three-bug analysis that explained Microsoft's stdout pollution and silent-exit bugs.
-- [modelcontextprotocol/mcpb](https://github.com/modelcontextprotocol/mcpb) — the MCPB bundle format and packing CLI.
+- [modelcontextprotocol/mcpb](https://github.com/modelcontextprotocol/mcpb) — the MCPB bundle format and packing CLI (Apache-2.0).
+
+## Trademarks and disclaimer
+
+"Power BI" is a trademark of Microsoft Corporation. "Claude" and "Claude Desktop" are trademarks of Anthropic, PBC. This project is an independent community wrapper and is **not affiliated with, endorsed by, or sponsored by Microsoft, Anthropic, or any of their subsidiaries.** All trademarks are the property of their respective owners.
+
+The Power BI Modeling MCP Server (`@microsoft/powerbi-modeling-mcp`) is published by Microsoft under the MIT License and is downloaded directly from npm when you run `npm install` against this repo. No Microsoft code is included in this repository's git history.
 
 ## License
 
