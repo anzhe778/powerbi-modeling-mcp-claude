@@ -50,7 +50,7 @@ When Microsoft fixes Bugs 2 and 3 upstream, the launcher in this repo can be sim
 
 ```powershell
 # 1. Clone
-git clone https://github.com/<you>/powerbi-modeling-mcp-claude.git
+git clone https://github.com/anzhe778/powerbi-modeling-mcp-claude.git
 cd powerbi-modeling-mcp-claude
 
 # 2. Install Microsoft's package + transitive deps into the bundle
